@@ -24,7 +24,8 @@ public class Parameterized2Test {
         return new Object[]{
                 "google.com",
                 "mkyong.com",
-                "twitter.com"
+                "twitter.com",
+                "baidu.com"
         };
     }
 
