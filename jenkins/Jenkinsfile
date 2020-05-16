@@ -25,16 +25,17 @@ pipeline {
                     steps {
                         sh 'mvn pmd:pmd'
                     }
+                    post {
+                            always {
+                             pmd(canRunOnFailed: true,pattern: '**/target/pmd.xml')
+                              }
+                            }
                 }
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
-        post {
-        always {
-         pmd(canRunOnFailed: true,pattern: '**/target/pmd.xml')
-          }
-        }
+
     }
 }
