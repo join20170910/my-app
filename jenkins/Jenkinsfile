@@ -21,10 +21,20 @@ pipeline {
                 }
             }
         }
+        stage('pmd') {
+                    steps {
+                        sh 'mvn pmd:pmd'
+                    }
+                }
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
             }
+        }
+        post {
+        always {
+         pmd(canRunOnFailed: true,pattern: '**/target/pmd.xml')
+          }
         }
     }
 }
