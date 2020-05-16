@@ -31,11 +31,7 @@ pipeline {
                               }
                             }
                 }
-        stage('performance test'){
-          steps {
-             bzt params: 'blaze_exist_jmeter_config.yml'
-          }
-        }
+        
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
