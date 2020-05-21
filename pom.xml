@@ -27,6 +27,7 @@
 
     <webjars.bootstrap.version>3.3.7</webjars.bootstrap.version>
     <webjars.jquery.version>3.2.1</webjars.jquery.version>
+    <jmh.version>1.19</jmh.version>
   </properties>
   <dependencies>
     <dependency>
@@ -79,6 +80,20 @@
       <groupId>com.offbytwo.jenkins</groupId>
       <artifactId>jenkins-client</artifactId>
       <version>0.3.8</version>
+    </dependency>
+
+     <!-- JMH基准测试-->
+
+    <dependency>
+      <groupId>org.openjdk.jmh</groupId>
+      <artifactId>jmh-core</artifactId>
+      <version>${jmh.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openjdk.jmh</groupId>
+      <artifactId>jmh-generator-annprocess</artifactId>
+      <version>${jmh.version}</version>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
