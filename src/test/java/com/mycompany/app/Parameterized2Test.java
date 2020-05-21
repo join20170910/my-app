@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package java.com.mycompany.app;
 
 import com.mycompany.app.testa.DomainUtils;
 import org.junit.Test;

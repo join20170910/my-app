@@ -13,3 +13,7 @@ The `jenkins` directory contains an example of the `Jenkinsfile` (i.e. Pipeline)
 you'll be creating yourself during the tutorial and the `scripts` subdirectory
 contains a shell script with commands that are executed when Jenkins processes
 the "Deliver" stage of your Pipeline.
+
+
+
+性能测试JMH的例子，包括官网和自己的demo，最新代码请见官网http://openjdk.java.net/projects/code-tools/jmh/
