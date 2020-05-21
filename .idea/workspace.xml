@@ -1,72 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4836c89-5d2b-497b-8364-c53844268ef6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/archived/app.2020-05-15.0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/archived/app.2020-05-20.0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/StartWebApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/app/Ps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/app/testa/MessageBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/component/JenkinsApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/component/JobApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/conf/JenkinsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/demo/MapBenchmark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/jmh/BuilderVsBuffer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_01_HelloWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_02_BenchmarkModes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_03_States.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_04_DefaultState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_05_StateFixtures.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_06_FixtureLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_07_FixtureLevelInvocation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_08_DeadCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_09_Blackholes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_10_ConstantFold.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_11_Loops.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_12_Forking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_13_RunToRun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_15_Asymmetric.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_16_CompilerControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_17_SyncIterations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_18_Control.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_20_Annotations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_21_ConsumeCPU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_22_FalseSharing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_23_AuxCounters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_24_Inheritance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_25_API_GA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_26_BatchSize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_27_Params.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_28_BlackholeHelpers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_29_StatesDAG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_30_Interrupts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_31_InfraParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_32_BulkWarmup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_33_SecurityManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_34_SafeLooping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_35_Profilers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_36_BranchPrediction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_37_CacheAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_38_PerInvokeSetup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/com/mycompany/app/JenkinsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/com/mycompany/app/OptionalTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/com/mycompany/jmh/JMHSample_01_HelloWorldTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/com/mycompany/jmh/PsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/com/mycompany/jmh/TestPS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jenkins/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/jenkins/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/app/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/mycompany/app/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/app/Parameterized2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/app/Parameterized2Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/app/RandomEmailGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/mycompany/app/RandomEmailGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/app/TestHelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/mycompany/app/TestHelloWorld.java" afterDir="false" />
-    </list>
+    <list default="true" id="c55be17f-bc7e-42ad-84ea-421b174751b1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,8 +64,8 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/com/mycompany" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.17285156" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
@@ -555,10 +490,10 @@
       <screen x="0" y="0" width="1366" height="737" />
     </state>
     <state x="463" y="78" key="RollbackChangesDialog/0.0.1366.737@0.0.1366.737" timestamp="1589041108907" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1590032063682">
+    <state x="163" y="0" key="SettingsEditor" timestamp="1590044858975">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.737@0.0.1366.737" timestamp="1590032063682" />
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.737@0.0.1366.737" timestamp="1590044858975" />
     <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1589964091781">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
