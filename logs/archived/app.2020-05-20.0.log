@@ -1,0 +1,30 @@
+2020-05-20 17:38:52,327 INFO com.mycompany.app.JenkinsTest [main] Starting JenkinsTest on john-PC with PID 8284 (started by john in F:\study_space\simple-java-maven-app)
+2020-05-20 17:38:52,349 DEBUG com.mycompany.app.JenkinsTest [main] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-05-20 17:38:52,352 INFO com.mycompany.app.JenkinsTest [main] No active profile set, falling back to default profiles: default
+2020-05-20 17:38:58,507 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 9090 (http)
+2020-05-20 17:38:58,833 INFO org.springframework.web.context.ContextLoader [main] Root WebApplicationContext: initialization completed in 6312 ms
+2020-05-20 17:39:00,654 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-20 17:39:02,052 INFO org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration [main] 
+
+Using generated security password: 936960b9-9b85-42e6-8387-37d40c36eb62
+
+2020-05-20 17:39:02,792 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@264a62a9, org.springframework.security.web.context.SecurityContextPersistenceFilter@29cd9ce5, org.springframework.security.web.header.HeaderWriterFilter@79fce437, org.springframework.security.web.csrf.CsrfFilter@65ae655b, org.springframework.security.web.authentication.logout.LogoutFilter@4ade6987, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@214882a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4762c011, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a5b1633, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58df5c2, org.springframework.security.web.session.SessionManagementFilter@4f60df4a, org.springframework.security.web.access.ExceptionTranslationFilter@4257adf9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7aec7779]
+2020-05-20 17:39:02,944 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-05-20 17:39:04,644 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 9090 (http) with context path ''
+2020-05-20 17:39:04,652 INFO com.mycompany.app.JenkinsTest [main] Started JenkinsTest in 15.383 seconds (JVM running for 21.401)
+2020-05-20 17:39:10,611 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-20 17:39:54,206 INFO com.mycompany.app.JenkinsTest [main] Starting JenkinsTest on john-PC with PID 12232 (started by john in F:\study_space\simple-java-maven-app)
+2020-05-20 17:39:54,213 DEBUG com.mycompany.app.JenkinsTest [main] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-05-20 17:39:54,216 INFO com.mycompany.app.JenkinsTest [main] No active profile set, falling back to default profiles: default
+2020-05-20 17:39:59,777 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 9090 (http)
+2020-05-20 17:40:00,166 INFO org.springframework.web.context.ContextLoader [main] Root WebApplicationContext: initialization completed in 5854 ms
+2020-05-20 17:40:02,035 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-20 17:40:03,755 INFO org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration [main] 
+
+Using generated security password: 58474d3c-788e-4fc0-9d5d-93fbe5d7c68e
+
+2020-05-20 17:40:04,686 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@280b224c, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e009cae, org.springframework.security.web.header.HeaderWriterFilter@75c0c054, org.springframework.security.web.csrf.CsrfFilter@34db86a7, org.springframework.security.web.authentication.logout.LogoutFilter@e1ced84, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4d55b31c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53954d73, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e5d5c79, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@278d21cb, org.springframework.security.web.session.SessionManagementFilter@2640c542, org.springframework.security.web.access.ExceptionTranslationFilter@3c4d4a71, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@755a5813]
+2020-05-20 17:40:05,005 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-05-20 17:40:06,418 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 9090 (http) with context path ''
+2020-05-20 17:40:06,429 INFO com.mycompany.app.JenkinsTest [main] Started JenkinsTest in 13.741 seconds (JVM running for 19.22)
+2020-05-20 17:40:10,082 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'

@@ -1,0 +1,33 @@
+
+U	java:S106\"9Replace this use of System.out or System.err by a logger.(Ûæ•‘8ñÉÔ©£.
+r	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è¢ã†ÿÿÿÿÿ8ğÉÔ©£.
+U	java:S1065"9Replace this use of System.out or System.err by a logger.(ŞŸÂü8ğÉÔ©£.
+Z	java:S1064"9Replace this use of System.out or System.err by a logger.(µÁóíıÿÿÿÿ8ğÉÔ©£.
+m
+java:S2095K"KUse try-with-resources or close this "JenkinsServer" in a "finally" clause.(Õõ…Şøÿÿÿÿ8ğÉÔ©£.
+Z	java:S1066"9Replace this use of System.out or System.err by a logger.(’Œ¨üÿÿÿÿ8ñÉÔ©£.
+Z	java:S106Q"9Replace this use of System.out or System.err by a logger.(™Î­Ëÿÿÿÿÿ8ñÉÔ©£.
+X	java:S125T"<This block of commented-out lines of code should be removed.(¬¼Şô8ñÉÔ©£.
+s
+java:S1192"VDefine a constant instead of duplicating this literal "simple-java-maven-app" 5 times.(×²Ûß8ğÉÔ©£.
+]
+java:S1854I";Remove this useless assignment to local variable "jobName".(å­î½ûÿÿÿÿ8ñÉÔ©£.
+X	java:S125%"<This block of commented-out lines of code should be removed.(ò¥èÔ8ñÉÔ©£.
+E
+java:S1148;"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ğÉÔ©£.
+U	java:S106j"9Replace this use of System.out or System.err by a logger.(÷Ñ¹‚8ñÉÔ©£.
+Z	java:S1069"9Replace this use of System.out or System.err by a logger.(úÒÍ±úÿÿÿÿ8ñÉÔ©£.
+X
+java:S1481B"6Remove this unused "jenkinsHttpClient" local variable.(ÁØ°§ıÿÿÿÿ8ñÉÔ©£.
+U	java:S106h"9Replace this use of System.out or System.err by a logger.(ı™…Ó8ñÉÔ©£.
+Z	java:S106&"9Replace this use of System.out or System.err by a logger.(éç¬ùÿÿÿÿ8ğÉÔ©£.
+]	java:S125V"<This block of commented-out lines of code should be removed.(ÑÆÀıÿÿÿÿ8ñÉÔ©£.
+Z	java:S106L"9Replace this use of System.out or System.err by a logger.(ûşù—ùÿÿÿÿ8ñÉÔ©£.
+m	java:S117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ëê¨8ğÉÔ©£.
+I
+java:S1602P",Remove useless curly braces around statement(ŒÒ¢ó8ñÉÔ©£.
+m	java:S117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÒ·Å8ğÉÔ©£.
+‰
+java:S1130#"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¾ŒÚ8ğÉÔ©£.
+N
+java:S1481I",Remove this unused "jobName" local variable.(å­î½ûÿÿÿÿ8ñÉÔ©£.
