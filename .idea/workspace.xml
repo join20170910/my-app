@@ -1,72 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4836c89-5d2b-497b-8364-c53844268ef6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/archived/app.2020-05-15.0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/archived/app.2020-05-20.0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/StartWebApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/app/Ps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/app/testa/MessageBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/component/JenkinsApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/component/JobApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/conf/JenkinsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/demo/MapBenchmark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/jmh/BuilderVsBuffer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_01_HelloWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_02_BenchmarkModes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_03_States.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_04_DefaultState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_05_StateFixtures.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_06_FixtureLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_07_FixtureLevelInvocation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_08_DeadCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_09_Blackholes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_10_ConstantFold.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_11_Loops.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_12_Forking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_13_RunToRun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_15_Asymmetric.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_16_CompilerControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_17_SyncIterations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_18_Control.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_20_Annotations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_21_ConsumeCPU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_22_FalseSharing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_23_AuxCounters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_24_Inheritance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_25_API_GA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_26_BatchSize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_27_Params.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_28_BlackholeHelpers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_29_StatesDAG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_30_Interrupts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_31_InfraParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_32_BulkWarmup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_33_SecurityManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_34_SafeLooping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_35_Profilers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_36_BranchPrediction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_37_CacheAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/samples/JMHSample_38_PerInvokeSetup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/com/mycompany/app/JenkinsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/com/mycompany/app/OptionalTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/com/mycompany/jmh/JMHSample_01_HelloWorldTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/com/mycompany/jmh/PsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/com/mycompany/jmh/TestPS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jenkins/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/jenkins/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/app/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/mycompany/app/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/app/Parameterized2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/app/Parameterized2Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/app/RandomEmailGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/mycompany/app/RandomEmailGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/app/TestHelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/mycompany/app/TestHelloWorld.java" afterDir="false" />
-    </list>
+    <list default="true" id="c4836c89-5d2b-497b-8364-c53844268ef6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -258,7 +193,7 @@
       <workItem from="1589605124188" duration="4229000" />
       <workItem from="1589944291784" duration="5413000" />
       <workItem from="1590028925025" duration="2798000" />
-      <workItem from="1590031826645" duration="2723000" />
+      <workItem from="1590031826645" duration="3102000" />
     </task>
     <task id="LOCAL-00001" summary="使用本地镜像引用">
       <created>1589040135966</created>
@@ -507,22 +442,22 @@
       <screen x="0" y="0" width="1366" height="737" />
     </state>
     <state x="463" y="66" key="FileChooserDialogImpl/0.0.1366.737@0.0.1366.737" timestamp="1590031241395" />
-    <state width="1322" height="94" key="GridCell.Tab.0.bottom" timestamp="1590033651594">
+    <state width="1322" height="278" key="GridCell.Tab.0.bottom" timestamp="1590043398460">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1322" height="94" key="GridCell.Tab.0.bottom/0.0.1366.737@0.0.1366.737" timestamp="1590033651594" />
-    <state width="1322" height="94" key="GridCell.Tab.0.center" timestamp="1590033651594">
+    <state width="1322" height="278" key="GridCell.Tab.0.bottom/0.0.1366.737@0.0.1366.737" timestamp="1590043398460" />
+    <state width="1322" height="278" key="GridCell.Tab.0.center" timestamp="1590043398459">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1322" height="94" key="GridCell.Tab.0.center/0.0.1366.737@0.0.1366.737" timestamp="1590033651594" />
-    <state width="1322" height="94" key="GridCell.Tab.0.left" timestamp="1590033651594">
+    <state width="1322" height="278" key="GridCell.Tab.0.center/0.0.1366.737@0.0.1366.737" timestamp="1590043398459" />
+    <state width="1322" height="278" key="GridCell.Tab.0.left" timestamp="1590043398459">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1322" height="94" key="GridCell.Tab.0.left/0.0.1366.737@0.0.1366.737" timestamp="1590033651594" />
-    <state width="1322" height="94" key="GridCell.Tab.0.right" timestamp="1590033651594">
+    <state width="1322" height="278" key="GridCell.Tab.0.left/0.0.1366.737@0.0.1366.737" timestamp="1590043398459" />
+    <state width="1322" height="278" key="GridCell.Tab.0.right" timestamp="1590043398459">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1322" height="94" key="GridCell.Tab.0.right/0.0.1366.737@0.0.1366.737" timestamp="1590033651594" />
+    <state width="1322" height="278" key="GridCell.Tab.0.right/0.0.1366.737@0.0.1366.737" timestamp="1590043398459" />
     <state width="1322" height="2" key="GridCell.Tab.1.bottom" timestamp="1589542807841">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
@@ -559,10 +494,10 @@
       <screen x="0" y="0" width="1366" height="737" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.737@0.0.1366.737" timestamp="1590032063682" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1589964091781">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1590043773396">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.737@0.0.1366.737" timestamp="1589964091781" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.737@0.0.1366.737" timestamp="1590043773396" />
     <state x="482" y="145" key="chooseDestDirectoryDialog" timestamp="1590030548123">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
