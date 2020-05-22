@@ -193,7 +193,7 @@
       <workItem from="1589605124188" duration="4229000" />
       <workItem from="1589944291784" duration="5413000" />
       <workItem from="1590028925025" duration="2798000" />
-      <workItem from="1590031826645" duration="2723000" />
+      <workItem from="1590031826645" duration="3102000" />
     </task>
     <task id="LOCAL-00001" summary="使用本地镜像引用">
       <created>1589040135966</created>
@@ -442,22 +442,22 @@
       <screen x="0" y="0" width="1366" height="737" />
     </state>
     <state x="463" y="66" key="FileChooserDialogImpl/0.0.1366.737@0.0.1366.737" timestamp="1590031241395" />
-    <state width="1322" height="94" key="GridCell.Tab.0.bottom" timestamp="1590033651594">
+    <state width="1322" height="278" key="GridCell.Tab.0.bottom" timestamp="1590043398460">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1322" height="94" key="GridCell.Tab.0.bottom/0.0.1366.737@0.0.1366.737" timestamp="1590033651594" />
-    <state width="1322" height="94" key="GridCell.Tab.0.center" timestamp="1590033651594">
+    <state width="1322" height="278" key="GridCell.Tab.0.bottom/0.0.1366.737@0.0.1366.737" timestamp="1590043398460" />
+    <state width="1322" height="278" key="GridCell.Tab.0.center" timestamp="1590043398459">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1322" height="94" key="GridCell.Tab.0.center/0.0.1366.737@0.0.1366.737" timestamp="1590033651594" />
-    <state width="1322" height="94" key="GridCell.Tab.0.left" timestamp="1590033651594">
+    <state width="1322" height="278" key="GridCell.Tab.0.center/0.0.1366.737@0.0.1366.737" timestamp="1590043398459" />
+    <state width="1322" height="278" key="GridCell.Tab.0.left" timestamp="1590043398459">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1322" height="94" key="GridCell.Tab.0.left/0.0.1366.737@0.0.1366.737" timestamp="1590033651594" />
-    <state width="1322" height="94" key="GridCell.Tab.0.right" timestamp="1590033651594">
+    <state width="1322" height="278" key="GridCell.Tab.0.left/0.0.1366.737@0.0.1366.737" timestamp="1590043398459" />
+    <state width="1322" height="278" key="GridCell.Tab.0.right" timestamp="1590043398459">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state width="1322" height="94" key="GridCell.Tab.0.right/0.0.1366.737@0.0.1366.737" timestamp="1590033651594" />
+    <state width="1322" height="278" key="GridCell.Tab.0.right/0.0.1366.737@0.0.1366.737" timestamp="1590043398459" />
     <state width="1322" height="2" key="GridCell.Tab.1.bottom" timestamp="1589542807841">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
@@ -493,11 +493,12 @@
     <state x="163" y="0" key="SettingsEditor" timestamp="1590044858975">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
+
     <state x="163" y="0" key="SettingsEditor/0.0.1366.737@0.0.1366.737" timestamp="1590044858975" />
     <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1589964091781">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.737@0.0.1366.737" timestamp="1589964091781" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.737@0.0.1366.737" timestamp="1590043773396" />
     <state x="482" y="145" key="chooseDestDirectoryDialog" timestamp="1590030548123">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
