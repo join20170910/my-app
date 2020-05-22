@@ -36,6 +36,14 @@ public class TestPS {
     Ps.parallel();
   }
 
+  @Benchmark
+  @Warmup(iterations = 1, time = 3)
+  @Fork(5) // 指定5个线程
+  @BenchmarkMode(Mode.Throughput) // 吞吐量
+  @Measurement(iterations = 1, time = 3)
+  public void testForeach(){
+    Ps.foreach();
+  }
 
     public static void main(String[] args) throws RunnerException {
       Options opt = new OptionsBuilder()

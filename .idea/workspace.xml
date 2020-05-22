@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4836c89-5d2b-497b-8364-c53844268ef6" name="Default Changelist" comment="" />
+    <list default="true" id="c55be17f-bc7e-42ad-84ea-421b174751b1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,8 +64,8 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/com/mycompany" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.17285156" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
@@ -490,11 +490,12 @@
       <screen x="0" y="0" width="1366" height="737" />
     </state>
     <state x="463" y="78" key="RollbackChangesDialog/0.0.1366.737@0.0.1366.737" timestamp="1589041108907" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1590032063682">
+    <state x="163" y="0" key="SettingsEditor" timestamp="1590044858975">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.737@0.0.1366.737" timestamp="1590032063682" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1590043773396">
+
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.737@0.0.1366.737" timestamp="1590044858975" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1589964091781">
       <screen x="0" y="0" width="1366" height="737" />
     </state>
     <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.737@0.0.1366.737" timestamp="1590043773396" />
