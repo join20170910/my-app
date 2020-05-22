@@ -1,0 +1,47 @@
+
+V	java:S106"9Replace this use of System.out or System.err by a logger.(øÄ §8ˆ…×·¡.
+F
+java:S1148í"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8êœØ·¡.
+U	java:S106g"9Replace this use of System.out or System.err by a logger.(øÄ §8ˆ…×·¡.
+E
+java:S1148/"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8êœØ·¡.
+E
+java:S1148["#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8êœØ·¡.
+F
+java:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8êœØ·¡.
+Z	java:S106i"9Replace this use of System.out or System.err by a logger.(Ê«½ùÿÿÿÿ8ˆ…×·¡.
+g
+java:S1128"JRemove this unused import 'com.offbytwo.jenkins.client.JenkinsHttpClient'.(Íøìí8ó•à·¡.
+V	java:S106œ"9Replace this use of System.out or System.err by a logger.(øÄ §8ˆ…×·¡.
+T	java:S106s"9Replace this use of System.out or System.err by a logger.(µÈİ}8ˆ…×·¡.
+F
+java:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8êœØ·¡.
+\
+java:S1128"?Remove this unused import 'com.offbytwo.jenkins.JenkinsServer'.(®ĞûŒ8î¶Ü·¡.
+E
+java:S1481"(Remove this unused "job" local variable.(¹øÏ8ˆ…×·¡.
+F
+java:S1148ø"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8êœØ·¡.
+F
+java:S1148â"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8êœØ·¡.
+F
+java:S1148¶"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8êœØ·¡.
+F
+java:S1148«"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8êœØ·¡.
+F
+java:S1148É"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8êœØ·¡.
+Z	java:S106k"9Replace this use of System.out or System.err by a logger.(öúŠ§øÿÿÿÿ8ˆ…×·¡.
+U	java:S106q"9Replace this use of System.out or System.err by a logger.(†öÖº8ˆ…×·¡.
+T
+java:S1854"7Remove this useless assignment to local variable "job".(¹øÏ8ˆ…×·¡.
+[	java:S106©"9Replace this use of System.out or System.err by a logger.(á±Çäûÿÿÿÿ8ˆ…×·¡.
+F
+java:S1148×"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8êœØ·¡.
+l
+java:S1192-"JDefine a constant instead of duplicating this literal "test-job" 10 times.(™·²Êşÿÿÿÿ8ˆ…×·¡.
+F
+java:S1148Ÿ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8êœØ·¡.
+U	java:S106m"9Replace this use of System.out or System.err by a logger.(ä°Øë8ˆ…×·¡.
+Z	java:S106o"9Replace this use of System.out or System.err by a logger.(Í™¯ùÿÿÿÿ8ˆ…×·¡.
+E
+java:S1148u"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8êœØ·¡.

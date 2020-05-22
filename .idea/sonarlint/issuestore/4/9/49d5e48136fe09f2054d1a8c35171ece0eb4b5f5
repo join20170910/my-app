@@ -1,0 +1,43 @@
+
+E
+java:S1148n"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Úœ¯·¡.
+Z	java:S106b"9Replace this use of System.out or System.err by a logger.(£ÄùÓúÿÿÿÿ8Úœ¯·¡.
+Z	java:S106d"9Replace this use of System.out or System.err by a logger.(ƒ“Û™ýÿÿÿÿ8Úœ¯·¡.
+X	java:S125]"<This block of commented-out lines of code should be removed.(ŽÊº„8‰°Ê·¡.
+T	java:S106w"9Replace this use of System.out or System.err by a logger.(»ÄÓ88Úœ¯·¡.
+]
+java:S1854""@Remove this useless assignment to local variable "executorList".( Õœš8Úœ¯·¡.
+[	java:S106Œ"9Replace this use of System.out or System.err by a logger.(¿¼Ÿÿøÿÿÿÿ8Úœ¯·¡.
+U	java:S106h"9Replace this use of System.out or System.err by a logger.(¹Áã…8Úœ¯·¡.
+[	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(ô½°Ëýÿÿÿÿ8Úœ¯·¡.
+V	java:S106†"9Replace this use of System.out or System.err by a logger.(í’¬‰8Úœ¯·¡.
+a
+java:S1854("?Remove this useless assignment to local variable "monitorData".(ˆÚ«©øÿÿÿÿ8Úœ¯·¡.
+N
+java:S1481""1Remove this unused "executorList" local variable.( Õœš8Úœ¯·¡.
+_
+java:S1854&"BRemove this useless assignment to local variable "loadStatistics".(‡ªœ˜8Úœ¯·¡.
+Z	java:S106 "9Replace this use of System.out or System.err by a logger.( §ß±úÿÿÿÿ8Úœ¯·¡.
+[	java:S106Š"9Replace this use of System.out or System.err by a logger.(ªš«Ýúÿÿÿÿ8Úœ¯·¡.
+P
+java:S1481&"3Remove this unused "loadStatistics" local variable.(‡ªœ˜8Úœ¯·¡.
+U	java:S106`"9Replace this use of System.out or System.err by a logger.(À¡þ…8Úœ¯·¡.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ÝÇô±8Úœ¯·¡.
+Z	java:S106f"9Replace this use of System.out or System.err by a logger.(®Ž¨Õþÿÿÿÿ8Úœ¯·¡.
+V	java:S106„"9Replace this use of System.out or System.err by a logger.(£æÓ¿8Úœ¯·¡.
+E
+java:S11487"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Úœ¯·¡.
+R
+java:S1481("0Remove this unused "monitorData" local variable.(ˆÚ«©øÿÿÿÿ8Úœ¯·¡.
+Z	java:S106l"9Replace this use of System.out or System.err by a logger.(Ä’ë—üÿÿÿÿ8Úœ¯·¡.
+[	java:S106Ž"9Replace this use of System.out or System.err by a logger.(œÈñ€úÿÿÿÿ8Úœ¯·¡.
+E
+java:S1148M"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Úœ¯·¡.
+Z	java:S106j"9Replace this use of System.out or System.err by a logger.(ÍýÉœüÿÿÿÿ8Úœ¯·¡.
+E
+java:S1148,"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Úœ¯·¡.
+E
+java:S1148B"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Úœ¯·¡.
+F
+java:S1148‘"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Úœ¯·¡.
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(Úå’óûÿÿÿÿ8Úœ¯·¡.

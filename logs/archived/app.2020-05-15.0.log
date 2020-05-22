@@ -1,0 +1,127 @@
+2020-05-15 14:02:49,335 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jenkinsServer in com.mycompany.component.JenkinsApi required a bean of type 'com.offbytwo.jenkins.JenkinsServer' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.offbytwo.jenkins.JenkinsServer' in your configuration.
+
+2020-05-15 14:02:50,515 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jenkinsServer in com.mycompany.component.JenkinsApi required a bean of type 'com.offbytwo.jenkins.JenkinsServer' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.offbytwo.jenkins.JenkinsServer' in your configuration.
+
+2020-05-15 14:02:50,547 ERROR org.springframework.test.context.TestContextManager [main] Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2c8662ac] to prepare test instance [com.mycompany.app.JenkinsTest@260ff5b7]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jenkinsApi': Unsatisfied dependency expressed through field 'jenkinsServer'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.offbytwo.jenkins.JenkinsServer' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:125)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.offbytwo.jenkins.JenkinsServer' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1695)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1253)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 44 common frames omitted
+2020-05-15 16:39:51,004 INFO com.mycompany.StartWebApplication [restartedMain] Starting StartWebApplication on john-PC with PID 11872 (F:\study_space\simple-java-maven-app\target\classes started by john in F:\study_space\simple-java-maven-app)
+2020-05-15 16:39:51,011 DEBUG com.mycompany.StartWebApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-05-15 16:39:51,011 INFO com.mycompany.StartWebApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-05-15 16:39:55,714 INFO com.mycompany.StartWebApplication [restartedMain] Started StartWebApplication in 5.927 seconds (JVM running for 8.826)
+2020-05-15 16:40:56,371 INFO com.mycompany.StartWebApplication [restartedMain] Starting StartWebApplication on john-PC with PID 9540 (F:\study_space\simple-java-maven-app\target\classes started by john in F:\study_space\simple-java-maven-app)
+2020-05-15 16:40:56,375 DEBUG com.mycompany.StartWebApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-05-15 16:40:56,375 INFO com.mycompany.StartWebApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-05-15 16:41:00,813 INFO com.mycompany.StartWebApplication [restartedMain] Started StartWebApplication in 5.802 seconds (JVM running for 7.846)
+2020-05-15 16:42:42,749 INFO com.mycompany.StartWebApplication [restartedMain] Starting StartWebApplication on john-PC with PID 2092 (F:\study_space\simple-java-maven-app\target\classes started by john in F:\study_space\simple-java-maven-app)
+2020-05-15 16:42:42,753 DEBUG com.mycompany.StartWebApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-05-15 16:42:42,758 INFO com.mycompany.StartWebApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-05-15 16:42:47,846 INFO com.mycompany.StartWebApplication [restartedMain] Started StartWebApplication in 6.265 seconds (JVM running for 8.204)
+2020-05-15 16:43:24,359 INFO com.mycompany.StartWebApplication [restartedMain] Starting StartWebApplication on john-PC with PID 13132 (F:\study_space\simple-java-maven-app\target\classes started by john in F:\study_space\simple-java-maven-app)
+2020-05-15 16:43:24,363 DEBUG com.mycompany.StartWebApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-05-15 16:43:24,364 INFO com.mycompany.StartWebApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-05-15 16:43:28,441 INFO com.mycompany.StartWebApplication [restartedMain] Started StartWebApplication in 5.236 seconds (JVM running for 7.441)
+2020-05-15 16:44:18,067 INFO com.mycompany.StartWebApplication [restartedMain] Starting StartWebApplication on john-PC with PID 13936 (F:\study_space\simple-java-maven-app\target\classes started by john in F:\study_space\simple-java-maven-app)
+2020-05-15 16:44:18,071 DEBUG com.mycompany.StartWebApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-05-15 16:44:18,073 INFO com.mycompany.StartWebApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-05-15 16:44:18,271 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-15 16:44:18,272 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-15 16:44:20,542 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2020-05-15 16:44:20,698 INFO org.springframework.web.context.ContextLoader [restartedMain] Root WebApplicationContext: initialization completed in 2425 ms
+2020-05-15 16:44:21,237 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-15 16:44:21,828 INFO org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration [restartedMain] 
+
+Using generated security password: 9a080061-7785-4384-9e72-64656ce1ddb7
+
+2020-05-15 16:44:21,932 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1434ed8a, org.springframework.security.web.context.SecurityContextPersistenceFilter@f1f8bfd, org.springframework.security.web.header.HeaderWriterFilter@39db6eeb, org.springframework.security.web.csrf.CsrfFilter@5963012a, org.springframework.security.web.authentication.logout.LogoutFilter@6a4d224f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@212dc81d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5810c783, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3cf90d5d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d87da5f, org.springframework.security.web.session.SessionManagementFilter@430dd6db, org.springframework.security.web.access.ExceptionTranslationFilter@7561f3d4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@817863d]
+2020-05-15 16:44:21,977 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-05-15 16:44:21,983 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-05-15 16:44:22,079 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9090 (http) with context path ''
+2020-05-15 16:44:22,084 INFO com.mycompany.StartWebApplication [restartedMain] Started StartWebApplication in 4.985 seconds (JVM running for 7.094)
+2020-05-15 16:44:23,024 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(3)-192.168.26.1] Initializing Servlet 'dispatcherServlet'
+2020-05-15 16:44:23,034 INFO org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(3)-192.168.26.1] Completed initialization in 10 ms
