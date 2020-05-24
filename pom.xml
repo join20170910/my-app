@@ -154,8 +154,8 @@
             <id>checkstyle-validation</id>
             <phase>validate</phase>
             <configuration>
-              <configLocation>config/codestyle/checkstyle.xml</configLocation>
-              <suppressionsLocation>config/codestyle/checkstyle-suppressions.xml</suppressionsLocation>
+              <configLocation>conf/checkstyle.xml</configLocation>
+              <suppressionsLocation>conf/checkstyle-suppressions.xml</suppressionsLocation>
               <encoding>UTF-8</encoding>
               <consoleOutput>true</consoleOutput>
               <failOnViolation>true</failOnViolation>
