@@ -21,7 +21,7 @@ import java.util.Map;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class JenkinsTest {
 
-  @Resource private JenkinsConfig jenkinsConfig;
+  /*@Resource private JenkinsConfig jenkinsConfig;
 
   @Resource private JenkinsApi jenkinsApi;
   @Resource private JobApi jobApi;
@@ -39,7 +39,7 @@ public class JenkinsTest {
     jenkinsApi.getPluginInfo();
   }
 
-  /** 获取视图基本信息 */
+  *//** 获取视图基本信息 *//*
   @Test
   public void getView() {
     try {
@@ -110,5 +110,5 @@ public class JenkinsTest {
   @Test
   public void jenkinsApiTest(){
       jenkinsApi.getLabelNodeInfo("simple-java-maven-app");
-  }
+  }*/
 }
