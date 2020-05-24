@@ -127,7 +127,11 @@
       <version>${jmh.version}</version>
       <scope>provided</scope>
     </dependency>
-
+    <dependency>
+      <groupId>com.puppycrawl.tools</groupId>
+      <artifactId>checkstyle</artifactId>
+      <version>8.9</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -232,28 +236,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <version>${maven_checkstyle_version}</version>
-        <dependencies>
-          <dependency>
-            <groupId>com.puppycrawl.tools</groupId>
-            <artifactId>checkstyle</artifactId>
-            <version>8.9</version>
-          </dependency>
-        </dependencies>
-        <executions>
-          <execution>
-            <id>checkstyle-validation</id>
-            <phase>validate</phase>
-            <configuration>
-              <configLocation>conf/checkstyle.xml</configLocation>
-              <encoding>UTF-8</encoding>
-              <consoleOutput>true</consoleOutput>
-              <failOnViolation>true</failOnViolation>
-            </configuration>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </reporting>
