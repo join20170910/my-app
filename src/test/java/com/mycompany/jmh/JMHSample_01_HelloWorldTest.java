@@ -1,3 +1,4 @@
+/*
 package com.mycompany.jmh;
 
 import org.junit.Test;
@@ -10,6 +11,7 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 import java.util.concurrent.TimeUnit;
 
 
+*/
 /**
  *
  BenchmarkMode，使用模式，默认是Mode.Throughput，表示吞吐量,其他参数还有AverageTime，表示每次执行时间，SampleTime表示采样时间，SingleShotTime表示只运行一次，用于测试冷启动消耗时间，All表示统计前面的所有指标
@@ -19,7 +21,8 @@ import java.util.concurrent.TimeUnit;
  Fork，代表启动多个单独的进程分别测试每个方法，我们这里指定为每个方法启动一个进程。
  OutputTimeUnit 统计结果的时间单元，这个例子TimeUnit.SECONDS，我们在运行后会看到输出结果是统计每秒的吞吐量
 
- */
+ *//*
+
 @BenchmarkMode(Mode.Throughput)
 @Warmup(iterations = 3)
 @Measurement(iterations = 3, time = 5, timeUnit = TimeUnit.SECONDS)
@@ -49,3 +52,4 @@ public class JMHSample_01_HelloWorldTest {
         new Runner(opt).run();
     }
 }
+*/
