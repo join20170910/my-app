@@ -38,7 +38,7 @@ public class JMHSample_01_HelloWorldTest {
         //要测试的优化后代码
     }
 
-    @Test
+
     public void testJMH() throws RunnerException {
 
     System.out.println("start ");
