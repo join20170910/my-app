@@ -50,7 +50,7 @@ public class GlobalExceptionHandler  {
   @ExceptionHandler({MissingServletRequestParameterException.class})
   @ResponseStatus(HttpStatus.BAD_REQUEST)
   public JsonData handleError(HttpServletRequest request,MissingServletRequestParameterException e) {
-    logger.warn("缺少请求参数", e.getMessage());
+    logger.warn("缺少请求参数 请求方法为:{}, 请求url为: {}", request.getMethod(), request.getRequestURI(),e.getMessage());
     String message = String.format("缺少必要的请求参数: %s", e.getParameterName());
 
     return JsonData.buildError( message,null,ResultCode.PARAM_TYPE_ERROR.getCode(),request.getMethod()+ request.getRequestURI());
@@ -59,7 +59,7 @@ public class GlobalExceptionHandler  {
   @ExceptionHandler(MethodArgumentTypeMismatchException.class)
   @ResponseStatus(HttpStatus.BAD_REQUEST)
   public JsonData handleError(MethodArgumentTypeMismatchException e) {
-    logger.warn("请求参数格式错误", e.getMessage());
+    logger.warn("请求参数格式错误 请求方法为:{}, 请求url为: {}", e.getMessage());
     String message = String.format("请求参数格式错误: %s", e.getName());
     return JsonData.buildError(message,ResultCode.PARAM_TYPE_ERROR.getCode());
   }
@@ -67,14 +67,14 @@ public class GlobalExceptionHandler  {
   @ExceptionHandler(MethodArgumentNotValidException.class)
   @ResponseStatus(HttpStatus.BAD_REQUEST)
   public JsonData handleError(MethodArgumentNotValidException e) {
-    logger.warn("参数验证失败", e.getMessage());
+    logger.warn("参数验证失败 请求方法为:{}, 请求url为: {}", e.getMessage());
     return handleError(e.getBindingResult());
   }
 
   @ExceptionHandler(BindException.class)
   @ResponseStatus(HttpStatus.BAD_REQUEST)
   public JsonData handleError(BindException e) {
-    logger.warn("参数绑定失败", e.getMessage());
+    logger.warn("参数绑定失败 请求方法为:{}, 请求url为: {}", e.getMessage());
     return handleError(e.getBindingResult());
   }
 
@@ -87,7 +87,7 @@ public class GlobalExceptionHandler  {
   @ExceptionHandler(ConstraintViolationException.class)
   @ResponseStatus(HttpStatus.BAD_REQUEST)
   public JsonData handleError(ConstraintViolationException e) {
-    logger.warn("参数验证失败", e.getMessage());
+    logger.warn("参数验证失败 请求方法为:{}, 请求url为: {}", e.getMessage());
     Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
     ConstraintViolation<?> violation = violations.iterator().next();
     String path = ((PathImpl) violation.getPropertyPath()).getLeafNode().getName();
@@ -98,34 +98,34 @@ public class GlobalExceptionHandler  {
   @ExceptionHandler(NoHandlerFoundException.class)
   @ResponseStatus(HttpStatus.NOT_FOUND)
   public JsonData handleError(NoHandlerFoundException e) {
-    logger.error("404没找到请求:{}", e.getMessage());
+    logger.error("404没找到请求:{} 请求方法为:{}, 请求url为: {}", e.getMessage());
     return JsonData.buildSuccess(ResultCode.NOT_FOUND, e.getMessage());
   }
 
   @ExceptionHandler(HttpMessageNotReadableException.class)
   @ResponseStatus(HttpStatus.BAD_REQUEST)
   public JsonData handleError(HttpMessageNotReadableException e) {
-    logger.error("消息不能读取:{}", e.getMessage());
+    logger.error("消息不能读取:{} 请求方法为:{}, 请求url为: {}", e.getMessage());
     return JsonData.buildSuccess(ResultCode.MSG_NOT_READABLE, e.getMessage());
   }
 
   @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
   @ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
   public JsonData handleError(HttpRequestMethodNotSupportedException e) {
-    logger.error("不支持当前请求方法:{}", e.getMessage());
+    logger.error("不支持当前请求方法:{} 请求方法为:{}, 请求url为: {}", e.getMessage());
     return JsonData.buildSuccess(ResultCode.METHOD_NOT_SUPPORTED, e.getMessage());
   }
 
   @ExceptionHandler(HttpMediaTypeNotSupportedException.class)
   @ResponseStatus(HttpStatus.UNSUPPORTED_MEDIA_TYPE)
   public JsonData handleError(HttpMediaTypeNotSupportedException e) {
-    logger.error("不支持当前媒体类型:{}", e.getMessage());
+    logger.error("不支持当前媒体类型:{} 请求方法为:{}, 请求url为: {}", e.getMessage());
     return JsonData.buildSuccess(ResultCode.MEDIA_TYPE_NOT_SUPPORTED, e.getMessage());
   }
 
   @ExceptionHandler(Exception.class)
   public JsonData handlerException(Exception e) {
-    logger.error("服务器异常", e);
+    logger.error("服务器异常 请求方法为:{}, 请求url为: {}", e);
     // 发送服务异常事件
     return JsonData.buildSuccess(
             ResultCode.INTERNAL_SERVER_ERROR,
