@@ -1,6 +1,7 @@
 package com.mycompany.app.server.resource;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
@@ -34,4 +35,20 @@ public class Oauth2ResourceServerConfig extends ResourceServerConfigurerAdapter 
         //资源服务器ID
         resources.resourceId("order-server");
     }
+
+  /**
+   * @description: //TODO 配置url 请求需要 验证  permitAll不需要验证 使用默认配置
+   * @author: john
+   * @param http
+   * @return:
+   * @exception:
+   * @date: 2020/6/24 21:48
+   */
+  /*@Override
+  public void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests().antMatchers("/haha")
+                .permitAll()
+                .anyRequest()
+                .authenticated();
+    }*/
 }
