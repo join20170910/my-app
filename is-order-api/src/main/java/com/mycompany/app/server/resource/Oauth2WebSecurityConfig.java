@@ -1,6 +1,5 @@
 package com.mycompany.app.server.resource;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -24,6 +23,7 @@ import org.springframework.security.oauth2.provider.token.ResourceServerTokenSer
 @EnableWebSecurity
 public class Oauth2WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    //oauth/check_token
     private final String TOKEN_CHECK_URL = "http://localhost:9090/oauth/check_token";
 
     /**
@@ -37,7 +37,7 @@ public class Oauth2WebSecurityConfig extends WebSecurityConfigurerAdapter {
         RemoteTokenServices tokenServices = new RemoteTokenServices();
 
         //认证服务器配置的clientid
-        tokenServices.setClientId("order-service");
+        tokenServices.setClientId("orderService");
         //认证服务器配置的clientid 对应的密码
         tokenServices.setClientSecret("123456");
         //认证服务器地址
