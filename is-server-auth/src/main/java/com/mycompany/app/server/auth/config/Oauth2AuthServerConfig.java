@@ -69,6 +69,7 @@ public class Oauth2AuthServerConfig extends AuthorizationServerConfigurerAdapter
                 .scopes("read","write")
                 //token 有效期
                 .accessTokenValiditySeconds(3600)
+                //资源服务器
                 .resourceIds("order-server")
                 //授权类型：
                 .authorizedGrantTypes("password")
@@ -79,6 +80,7 @@ public class Oauth2AuthServerConfig extends AuthorizationServerConfigurerAdapter
                 .scopes("read")
                 //token 有效期
                 .accessTokenValiditySeconds(3600)
+                //资源服务器
                 .resourceIds("order-server")
                 //授权类型：
                 .authorizedGrantTypes("password");
