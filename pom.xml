@@ -9,6 +9,9 @@
       <module>app-common</module>
       <module>app-application</module>
     <module>eureka_server</module>
+    <module>is-order-api</module>
+      <module>is-price-api</module>
+      <module>is-server-auth</module>
   </modules>
   <name>my-app</name>
   <url>http://maven.apache.org</url>
@@ -119,8 +122,23 @@
       <artifactId>jenkins-client</artifactId>
       <version>0.3.8</version>
     </dependency>
-
-     <!-- JMH基准测试-->
+    <dependency>
+      <groupId>net.sourceforge.tess4j</groupId>
+      <artifactId>tess4j</artifactId>
+      <version>4.4.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp</artifactId>
+      <version>4.7.2</version>
+    </dependency>
+    <dependency>
+      <groupId>net.java.dev.jna</groupId>
+      <artifactId>jna</artifactId>
+      <version>5.5.0</version>
+    </dependency>
+    <!-- JMH基准测试-->
 
     <dependency>
       <groupId>org.openjdk.jmh</groupId>
