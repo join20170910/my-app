@@ -29,6 +29,7 @@ public class OrderController {
   public OrderInfo create(@RequestBody OrderInfo info, @AuthenticationPrincipal String userName) {
     //PriceInfo priceInfo = restTemplate.getForObject("http://localhost:9060/prices/" +info.getProductId(), PriceInfo.class);
     //log.info("price is {},测试：{}",priceInfo.getPrice(),"haha");
+    log.info("当前调用者的姓名: {}" ,userName);
     return info;
   }
 }
