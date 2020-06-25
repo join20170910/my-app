@@ -12,6 +12,10 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.token.TokenStore;
+import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
+
+import javax.sql.DataSource;
 
 /**
  * @Description:    //TODO Oauth2 配置文件  认证服务器配置
@@ -32,6 +36,13 @@ public class Oauth2AuthServerConfig extends AuthorizationServerConfigurerAdapter
     public BCryptPasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
+
+    @Bean
+    public TokenStore tokenStore(){
+        return new JdbcTokenStore(dataSource);
+    }
+    @Autowired
+    private DataSource dataSource;
     /**
      * 用户信息校验 验证
      */
@@ -49,7 +60,9 @@ public class Oauth2AuthServerConfig extends AuthorizationServerConfigurerAdapter
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
 
-        endpoints.authenticationManager(authenticationManager);
+        endpoints.
+                tokenStore(tokenStore())
+                .authenticationManager(authenticationManager);
     }
 
     /**
@@ -62,7 +75,10 @@ public class Oauth2AuthServerConfig extends AuthorizationServerConfigurerAdapter
      */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory()
+
+        clients.jdbc(dataSource);
+
+        /*clients.inMemory()
                 .withClient("orderApp")
                 .secret(passwordEncoder().encode("123456"))
                 //访问权限
@@ -83,7 +99,7 @@ public class Oauth2AuthServerConfig extends AuthorizationServerConfigurerAdapter
                 //资源服务器ID
                 .resourceIds("order-server")
                 //授权类型：
-                .authorizedGrantTypes("password");
+                .authorizedGrantTypes("password");*/
     }
 
 
