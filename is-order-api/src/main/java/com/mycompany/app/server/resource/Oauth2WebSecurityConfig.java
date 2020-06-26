@@ -1,13 +1,14 @@
 package com.mycompany.app.server.resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationManager;
-import org.springframework.security.oauth2.provider.token.RemoteTokenServices;
-import org.springframework.security.oauth2.provider.token.ResourceServerTokenServices;
+import org.springframework.security.oauth2.provider.token.*;
 
 
 /**
@@ -26,6 +27,9 @@ public class Oauth2WebSecurityConfig extends WebSecurityConfigurerAdapter {
     //oauth/check_token
     private final String TOKEN_CHECK_URL = "http://localhost:9090/oauth/check_token";
 
+    @Autowired
+    private UserDetailsService userDetailsService;
+
     /**
      * @description:   //TODO 远程 调用 认证 token 的服务
      * @author:        john
@@ -42,7 +46,18 @@ public class Oauth2WebSecurityConfig extends WebSecurityConfigurerAdapter {
         tokenServices.setClientSecret("123456");
         //认证服务器地址
         tokenServices.setCheckTokenEndpointUrl(TOKEN_CHECK_URL);
+        //将token 转换为user 信息
+        tokenServices.setAccessTokenConverter(getAccessTokenConverter());
         return tokenServices;
+    }
+
+    private AccessTokenConverter getAccessTokenConverter() {
+
+        DefaultAccessTokenConverter accessTokenConverter = new DefaultAccessTokenConverter();
+        DefaultUserAuthenticationConverter userTokenConverter = new DefaultUserAuthenticationConverter();
+        userTokenConverter.setUserDetailsService(userDetailsService);
+        accessTokenConverter.setUserTokenConverter(userTokenConverter);
+        return accessTokenConverter;
     }
 
 

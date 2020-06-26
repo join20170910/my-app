@@ -1,11 +1,9 @@
 package com.mycompany.app.order;
 
+import com.mycompany.app.server.resource.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 /** @author john */
@@ -18,7 +16,7 @@ public class OrderController {
 
 
   /**
-   * @description:   //TODO
+   * @description:   //TODO 创建 订单 显示 当前调用者的信息   相关使用@AuthenticationPrincipal(expression= "#this.id")
    * @author:        john
    * @param info   userName 当前调用的用户信息
    * @return:
@@ -26,10 +24,15 @@ public class OrderController {
    * @date:          2020/6/24 22:45
    */
   @PostMapping
-  public OrderInfo create(@RequestBody OrderInfo info, @AuthenticationPrincipal String userName) {
+  public OrderInfo create(@RequestBody OrderInfo info, @AuthenticationPrincipal User user) {
     //PriceInfo priceInfo = restTemplate.getForObject("http://localhost:9060/prices/" +info.getProductId(), PriceInfo.class);
     //log.info("price is {},测试：{}",priceInfo.getPrice(),"haha");
-    log.info("当前调用者的姓名: {}" ,userName);
+    log.info("当前调用者的姓名: {} ID：{}" ,user.getUsername(),user.getId());
     return info;
+  }
+  @GetMapping("/{id}")
+  public OrderInfo getInfo(@PathVariable Long id){
+    log.info("orderId is {}",id);
+    return new OrderInfo();
   }
 }
