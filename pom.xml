@@ -9,9 +9,16 @@
     <module>app-common</module>
     <module>app-application</module>
     <module>eureka_server</module>
+    <module>order_service</module>
+    <module>product_service</module>
+    <module>api-gateway</module>
+    <module>config-server</module>
+    <module>docker-demo</module>
+    <module>spring-state-machine</module>
     <module>is-order-api</module>
     <module>is-price-api</module>
     <module>is-server-auth</module>
+      <module>is-server-gateway</module>
   </modules>
   <name>my-app</name>
   <url>http://maven.apache.org</url>
