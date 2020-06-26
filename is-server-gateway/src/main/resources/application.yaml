@@ -1,0 +1,17 @@
+zuul:
+  routes:
+    user:
+      url: http://localhost:9090
+    token:
+      url: http://localhost:9090
+    order:
+      url: http://localhost:9080
+  sensitive-headers:
+# sensitive headers that are not passed to downstream requests 默认不转发
+# head设置为空  "Cookie", "Set-Cookie", "Authorization"  转发
+spring:
+  application:
+    name: gateway
+server:
+  port: 9070
+
