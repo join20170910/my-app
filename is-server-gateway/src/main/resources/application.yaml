@@ -1,7 +1,5 @@
 zuul:
   routes:
-    user:
-      url: http://localhost:9090
     token:
       url: http://localhost:9090
     order:
@@ -9,9 +7,35 @@ zuul:
   sensitive-headers:
 # sensitive headers that are not passed to downstream requests 默认不转发
 # head设置为空  "Cookie", "Set-Cookie", "Authorization"  转发
+  ratelimit:
+    enabled: true
+    repository: jpa
+    default-policy-list:
+      - limit: 2
+        quota: 1
+        refresh-interval: 3
+        type:
+          - url
+          - httpmethod
+    policy-list:
+      token:
+      - limit: 2
+        quota: 1
+        refresh-interval: 3
+        type:
+          - url
+          - httpmethod
 spring:
   application:
-    name: gateway
+    name:
+  datasource:
+    url: jdbc:mysql://localhost:3306/oauth2?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    generate-ddl: true
+    show-sql: true
 server:
   port: 9070
 
