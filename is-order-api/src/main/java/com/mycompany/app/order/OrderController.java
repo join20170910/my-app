@@ -1,8 +1,6 @@
 package com.mycompany.app.order;
 
-import com.mycompany.app.server.resource.User;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -24,10 +22,10 @@ public class OrderController {
    * @date:          2020/6/24 22:45
    */
   @PostMapping
-  public OrderInfo create(@RequestBody OrderInfo info, @AuthenticationPrincipal User user) {
+  public OrderInfo create(@RequestBody OrderInfo info, @RequestHeader String username) {
     //PriceInfo priceInfo = restTemplate.getForObject("http://localhost:9060/prices/" +info.getProductId(), PriceInfo.class);
     //log.info("price is {},测试：{}",priceInfo.getPrice(),"haha");
-    log.info("当前调用者的姓名: {} ID：{}" ,user.getUsername(),user.getId());
+    log.info("当前调用者的姓名: {} ID：{}" ,username);
     return info;
   }
   @GetMapping("/{id}")
