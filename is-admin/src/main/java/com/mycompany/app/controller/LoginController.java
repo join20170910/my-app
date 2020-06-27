@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 public class LoginController {
 
   //oauth/check_token
-  private final String TOKEN_CHECK_URL = "http://localhost:9070/token/oauth/token";
+  private final String TOKEN_CHECK_URL = "http://gateway.imooc.com:9070/token/oauth/token";
   private RestTemplate restTemplate = new RestTemplate();
 
   @PostMapping("/login")
