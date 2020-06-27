@@ -38,4 +38,13 @@ export class AppComponent {
       }
     )
   }
+  logout(){
+    this.http.post('/logout',this.credentials).subscribe(
+      () =>{
+        this.authenticated = false;
+      },() =>{
+        alert('logout fail ')
+      }
+    );
+  }
 }

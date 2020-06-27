@@ -8,6 +8,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -42,5 +43,11 @@ public class LoginController {
     ResponseEntity<TokenInfo> response = restTemplate.exchange(TOKEN_CHECK_URL, HttpMethod.POST,entity,TokenInfo.class);
     request.getSession().setAttribute("token",response.getBody());
     log.info("token info is {}",response.getBody().toString());
+  }
+
+  @PostMapping("/logout")
+  public void logout(HttpServletRequest request, @RequestHeader String username){
+    log.info("当前用户注销成功：{}",username );
+    request.getSession().invalidate();
   }
 }
