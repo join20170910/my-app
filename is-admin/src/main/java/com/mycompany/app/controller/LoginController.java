@@ -56,7 +56,7 @@ public class LoginController {
    **/
   @PostMapping("/logout")
   public void logout(HttpServletRequest request){
-    log.info("session 注销成功 ");
+    log.info(" session 注销成功 ");
     request.getSession().invalidate();
   }
 
