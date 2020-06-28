@@ -6,17 +6,18 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.*;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
- * @author john
- */
+ * @Author john
+ * @Description //TODO  登陆相关的功能
+ * @Date 16:12 2020/6/28
+ **/
 @RestController
 @Slf4j
 public class LoginController {
@@ -24,10 +25,11 @@ public class LoginController {
   //oauth/check_token
   private final String TOKEN_CHECK_URL = "http://gateway.imooc.com:9070/token/oauth/token";
   private RestTemplate restTemplate = new RestTemplate();
+  private HttpHeaders headers = new HttpHeaders();
 
   @PostMapping("/login")
   public void login(HttpServletRequest request, @RequestBody Credentials credentials){
-    HttpHeaders headers = new HttpHeaders();
+
     headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
     headers.setBasicAuth("admin","123456");
     MultiValueMap<String,String> params = new LinkedMultiValueMap<>();
@@ -49,5 +51,37 @@ public class LoginController {
   public void logout(HttpServletRequest request, @RequestHeader String username){
     log.info("当前用户注销成功：{}",username );
     request.getSession().invalidate();
+  }
+
+  /**
+   * @Author john
+   * @Description //TODO oauth2 回调方法
+   * @Date 16:10 2020/6/28
+   * @Param [code, state, request]
+   * @return void
+   **/
+  @GetMapping("/oauth/callback")
+  public void callback(@RequestParam String code, String state, HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+    log.info("state is {}" ,state);
+    headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+    headers.setBasicAuth("admin","123456");
+    MultiValueMap<String,String> params = new LinkedMultiValueMap<>();
+
+    params.add("code",code);
+    params.add("grant_type","authorization_code");
+    params.add("redirect_uri","http://admin.imooc.com:8080/oauth/callback");
+
+    HttpEntity<MultiValueMap<String,String>> entity = new HttpEntity<>(params,headers);
+    ResponseEntity<TokenInfo> responseEntity = restTemplate.exchange(TOKEN_CHECK_URL, HttpMethod.POST,entity,TokenInfo.class);
+    request.getSession().setAttribute("token",responseEntity.getBody());
+    response.sendRedirect("/");
+
+  }
+
+  @GetMapping("/me")
+  public TokenInfo me(HttpServletRequest request){
+    TokenInfo tokenInfo = (TokenInfo) request.getSession().getAttribute("token");
+    return tokenInfo == null ? null : tokenInfo;
   }
 }

@@ -13,7 +13,25 @@ export class AppComponent {
   authenticated = false;
   credentials = {username:'xixi',password: '123456'};
   order = {id:'0',productId:'100'}
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient){
+
+    this.http.get('me').subscribe(
+      data =>{
+        if (data){
+          this.authenticated = true;
+        }
+      },() =>{
+        alert('login fail ')
+      }
+    )
+    if (!this.authenticated){
+      window.location.href = 'http://auth.imooc.com:9090/oauth/authorize?'
+      + 'client_id=admin&'
+      + 'redirect_uri=http://admin.imooc.com:8080/oauth/callback&'
+      + 'response_type=code&'
+      + 'status=abc'
+    }
+  }
 
   login(){
     this.http.post('/login',this.credentials).subscribe(
