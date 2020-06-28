@@ -1,9 +1,9 @@
 zuul:
   routes:
     token:
-      url: http://localhost:9090
+      url: http://auth.imooc.com:9090
     order:
-      url: http://localhost:9080
+      url: http://order.imooc.com:9080
   sensitive-headers:
 # sensitive headers that are not passed to downstream requests 默认不转发
 # head设置为空  "Cookie", "Set-Cookie", "Authorization"  转发
@@ -11,17 +11,17 @@ zuul:
     enabled: true
     repository: jpa
     default-policy-list:
-      - limit: 2
-        quota: 1
-        refresh-interval: 3
+      - limit: 20
+        quota: 10
+        refresh-interval: 10
         type:
           - url
           - httpmethod
     policy-list:
       token:
-      - limit: 2
-        quota: 1
-        refresh-interval: 3
+      - limit: 20
+        quota: 10
+        refresh-interval: 10
         type:
           - url
           - httpmethod
