@@ -67,7 +67,7 @@ export class AppComponent {
     this.http.post('/logout',this.credentials).subscribe(
       () =>{
         //调转到认证服务器的默认的logout界面
-        window.location.href="http://auth.imooc.com:9090/logout?http://admin.imooc.com:8080"
+        window.location.href="http://auth.imooc.com:9090/logout?redirect_uri=http://admin.imooc.com:8080"
         //this.authenticated = false;
       },() =>{
         alert('logout fail ')
