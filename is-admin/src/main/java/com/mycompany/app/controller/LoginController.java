@@ -47,9 +47,16 @@ public class LoginController {
     log.info("token info is {}",response.getBody().toString());
   }
 
+  /**
+   * @Author john
+   * @Description //TODO 注销当前用户
+   * @Date 19:16 2020/6/28
+   * @Param [request]
+   * @return void
+   **/
   @PostMapping("/logout")
-  public void logout(HttpServletRequest request, @RequestHeader String username){
-    log.info("当前用户注销成功：{}",username );
+  public void logout(HttpServletRequest request){
+    log.info("session 注销成功 ");
     request.getSession().invalidate();
   }
 
@@ -82,6 +89,6 @@ public class LoginController {
   @GetMapping("/me")
   public TokenInfo me(HttpServletRequest request){
     TokenInfo tokenInfo = (TokenInfo) request.getSession().getAttribute("token");
-    return tokenInfo == null ? null : tokenInfo;
+    return tokenInfo;
   }
 }
