@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
@@ -14,6 +15,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
+import org.springframework.session.jdbc.config.annotation.web.http.EnableJdbcHttpSession;
 
 import javax.sql.DataSource;
 
@@ -25,6 +27,8 @@ import javax.sql.DataSource;
  * @CreateDate:     2020/6/24 15:55
  * @Version:        1.0
  */
+
+@EnableJdbcHttpSession
 @Configuration
 @EnableAuthorizationServer
 public class Oauth2AuthServerConfig extends AuthorizationServerConfigurerAdapter {
@@ -43,6 +47,8 @@ public class Oauth2AuthServerConfig extends AuthorizationServerConfigurerAdapter
     }
     @Autowired
     private DataSource dataSource;
+
+    private UserDetailsService userDetailsService;
     /**
      * 用户信息校验 验证
      */
@@ -61,7 +67,9 @@ public class Oauth2AuthServerConfig extends AuthorizationServerConfigurerAdapter
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
 
         endpoints.
-                tokenStore(tokenStore())
+                // reflesh_token 没有密码，通过userDetailsService 查询用户信息
+                userDetailsService(userDetailsService)
+                .tokenStore(tokenStore())
                 .authenticationManager(authenticationManager);
     }
 

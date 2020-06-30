@@ -43,7 +43,7 @@ public class LoginController {
     HttpEntity<MultiValueMap<String,String>> entity = new HttpEntity<>(params,headers);
 
     ResponseEntity<TokenInfo> response = restTemplate.exchange(TOKEN_CHECK_URL, HttpMethod.POST,entity,TokenInfo.class);
-    request.getSession().setAttribute("token",response.getBody());
+    request.getSession().setAttribute("token",response.getBody().init());
     log.info("token info is {}",response.getBody().toString());
   }
 
