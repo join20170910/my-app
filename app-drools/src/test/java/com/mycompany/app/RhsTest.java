@@ -3,6 +3,8 @@ package com.mycompany.app;
 import com.mycompany.app.bean.NumCount;
 import com.mycompany.app.bean.People;
 import com.mycompany.app.globa.GloableService;
+import org.drools.decisiontable.InputType;
+import org.drools.decisiontable.SpreadsheetCompiler;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.runner.RunWith;
@@ -11,10 +13,15 @@ import org.kie.api.definition.type.FactType;
 import org.kie.api.runtime.KieSession;
 import org.kie.api.runtime.rule.QueryResults;
 import org.kie.api.runtime.rule.QueryResultsRow;
+import org.kie.internal.io.ResourceFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -91,6 +98,34 @@ public class RhsTest {
             session.insert(obj);
             session.fireAllRules();
         }
+
+
+    @Test
+    public void compile() throws IOException {
+       /* File file = new File("D:\\iwork-space\\rule\\src\\test\\resources\\ka\\isP4P.xls");
+        InputStream is = new FileInputStream(file);
+*/
+
+        ResourcePatternResolver resourcePatternResolver = new PathMatchingResourcePatternResolver();
+        Resource[] resources = resourcePatternResolver.getResources("classpath*:" + "xls" + "**/*.*");
+        System.out.println(resources.length);
+
+        SpreadsheetCompiler converter = new SpreadsheetCompiler();
+        for (Resource fileResource : resources) {
+            fileResource.getInputStream();
+            FileReader fileReader = new FileReader(fileResource.getFile());
+
+            char[] buf = new char[6];
+               int len;
+                while((len=fileReader.read(buf)) != -1){
+                          String str = new String(buf,0,len);
+                         System.out.print(str);
+                     }
+            String drl = converter.compile(fileResource.getInputStream(), InputType.XLS); //--------exception here--------
+            System.out.println("\n\n" + drl);
+        }
+
+    }
 
         @AfterEach
         public void runDispose() {
