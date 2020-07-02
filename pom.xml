@@ -19,6 +19,8 @@
     <module>is-price-api</module>
     <module>is-server-auth</module>
       <module>is-server-gateway</module>
+      <module>is-admin</module>
+      <module>app-drools</module>
   </modules>
   <name>my-app</name>
   <url>http://maven.apache.org</url>

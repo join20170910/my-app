@@ -1,0 +1,9 @@
+package rules.testworld
+import com.mycompany.app.bean.People
+rule test001
+     when
+       $p:People(name =="张三" ,age==30);
+     then
+        $p.setName("");
+        end
+

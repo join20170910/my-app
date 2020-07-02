@@ -1,0 +1,10 @@
+package com.mycompany.app.bean
+import com.mycompany.app.bean.People
+import com.mycompany.app.bean.Animal
+rule "from"
+when
+    $an : Animal()
+    $p : People(sex != 3 && drlType == "from") from $an.peoples
+    then
+        System.out.println($p);
+    end
