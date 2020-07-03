@@ -1,0 +1,13 @@
+server:
+  port: 30001
+spring:
+  application:
+    name: nacos-config
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 112.74.31.211:8848
+      config:
+        server-addr: 112.74.31.211:8848
+        file-extension: yml
+        namespace: 1096f462-a9c5-48f1-a47e-cdec292316fb
