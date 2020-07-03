@@ -1,0 +1,8 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        incloud: '*'
+spring:
+  profiles:
+    active: dev
