@@ -2,7 +2,7 @@ package order_4
 
 import com.mycompany.app.bean.cal.Item
 
-
+//https://blog.csdn.net/u010952582/article/details/92797141?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.compare&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.compare
 //遍历orderId == 1的Item并累加其price并输出结果
 rule "order_4"
 salience 10
