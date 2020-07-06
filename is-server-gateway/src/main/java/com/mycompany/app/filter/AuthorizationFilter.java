@@ -5,7 +5,6 @@ import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.math.RandomUtils;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -80,7 +79,8 @@ public class AuthorizationFilter extends ZuulFilter {
      * @date:          2020/6/26 15:54
      */
     private boolean hasPermission(TokenInfo tokenInfo, HttpServletRequest request) {
-        return RandomUtils.nextInt() % 2 == 0;
+        //RandomUtils.nextInt() % 2 == 0
+        return true;
     }
 
 
@@ -96,7 +96,7 @@ public class AuthorizationFilter extends ZuulFilter {
 
         requestContext.getResponse().setContentType("application/json");
         requestContext.setResponseStatusCode(errorCode);
-        requestContext.setResponseBody("{\"message\"：\"auth fail\"}");
+    requestContext.setResponseBody("\"message\":\"auth fail\"");
         //停止流程向下处理
         requestContext.setSendZuulResponse(false);
     }
