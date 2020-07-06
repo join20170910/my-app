@@ -5,7 +5,9 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * Created by Youdmeng on 2020/1/7 0007.
+ *
+ * @author Youdmeng
+ * @date 2020/1/7 0007
  */
 @Data
 public class Animal {

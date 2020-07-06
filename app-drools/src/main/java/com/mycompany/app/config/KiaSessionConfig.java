@@ -1,8 +1,10 @@
 package com.mycompany.app.config;
 
+import org.drools.core.event.DebugAgendaEventListener;
 import org.kie.api.KieBase;
 import org.kie.api.KieServices;
 import org.kie.api.builder.*;
+import org.kie.api.event.rule.DebugRuleRuntimeEventListener;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.kie.internal.io.ResourceFactory;
@@ -67,6 +69,10 @@ public class KiaSessionConfig {
 
     @Bean
     public KieSession kieSession() throws IOException {
-        return kieContainer().newKieSession();
+
+        KieSession ksession= kieContainer().newKieSession();
+        ksession.addEventListener( new DebugAgendaEventListener() );
+        ksession.addEventListener( new DebugRuleRuntimeEventListener() );
+        return ksession;
     }
 }

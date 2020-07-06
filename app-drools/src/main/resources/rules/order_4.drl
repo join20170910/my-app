@@ -1,0 +1,30 @@
+package order_4
+
+import com.mycompany.app.bean.cal.Item
+
+
+//遍历orderId == 1的Item并累加其price并输出结果
+rule "order_4"
+salience 10
+when
+
+     $n:Number() from accumulate(
+
+                $item1:Item( orderId == 1,$value:price),
+                init(Integer i =0;Integer oI = 0;List inlist = new ArrayList();double total = 0;),
+                action(
+                       System.out.println("action println before:"+total);
+
+                       total+=$value;
+
+                      System.out.println("action println after:"+total);
+                ),
+
+                result(total)
+
+    )
+
+then
+    System.out.println("then print:"+$n);
+
+end

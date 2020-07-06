@@ -1,0 +1,11 @@
+package timingAndpiece
+
+/*
+    此规则文件用于测试function函数
+*/
+
+//定义一个函数
+
+function String sayHello(String name){
+    return "hello " + name;
+}
