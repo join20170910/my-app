@@ -25,7 +25,7 @@ public enum ResultCode implements IResultCode {
 	FAILURE(HttpServletResponse.SC_BAD_REQUEST, "业务异常"),
 
 	/**
-	 * 请求未授权
+	 * 请求未授权 401
 	 */
 	UN_AUTHORIZED(HttpServletResponse.SC_UNAUTHORIZED, "请求未授权"),
 

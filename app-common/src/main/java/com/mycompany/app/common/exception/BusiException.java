@@ -7,7 +7,6 @@ package com.mycompany.app.common.exception;
  */
 public class BusiException extends RuntimeException {
 
-
     /**
      * 状态码
      */
@@ -16,9 +15,6 @@ public class BusiException extends RuntimeException {
      * 异常消息
      */
     private String msg;
-
-
-
 
     public BusiException(int code, String msg){
         super(msg);
