@@ -7,16 +7,16 @@ import java.util.Date;
 /** @author john */
 @Data
 public class Order {
-  // ÏÂµ¥ÈÕÆÚ
+  // ä¸‹å•æ—¥æœŸ
 
   private Date bookingDate;
-  // ¶©µ¥Ô­¼Û½ğ¶î
+  // è®¢å•åŸä»·é‡‘é¢
 
   private int amout;
-  // ÏÂµ¥ÈË
+  // ä¸‹å•äºº
 
   private User user;
-  // »ı·Ö
+  // ç§¯åˆ†
 
   private int score;
 

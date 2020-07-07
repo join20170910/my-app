@@ -7,11 +7,23 @@ import lombok.ToString;
 @ToString
 public class Item {
     private Integer id;
-    private Integer orderId;//订单编码
-    private String goodId;//商品编码
-    private String name;//商品名称
-    private Double price;//单价
-    private Double count;//数量
+    //订单编码
+
+    private Integer orderId;
+    //商品编码
+
+    private String goodId;
+
+    //商品名称
+
+    private String name;
+    //单价
+
+    private Double price;
+    //数量
+
+    private Double count;
+
     private Order order;
     //getter、setter略
 

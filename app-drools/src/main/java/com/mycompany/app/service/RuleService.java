@@ -1,3 +1,4 @@
+/*
 package com.mycompany.app.service;
 
 import com.mycompany.app.bean.cal.Calculation;
@@ -6,11 +7,13 @@ import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+*/
 /**
 
  * 调用规则引擎，执行规则
 
- */
+ *//*
+
 
 @Service
 
@@ -34,3 +37,4 @@ public class RuleService<T> {
     }
 
 }
+*/

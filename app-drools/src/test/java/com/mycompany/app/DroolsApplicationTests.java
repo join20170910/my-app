@@ -6,15 +6,17 @@ import com.mycompany.app.bean.cal.Item;
 import com.mycompany.app.bean.discount.BookOrder;
 import com.mycompany.app.globa.GloableService;
 import com.mycompany.app.globa.UserService;
-import com.mycompany.app.service.RuleService;
+
 import org.drools.core.base.RuleNameEqualsAgendaFilter;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.runner.RunWith;
 import org.kie.api.KieBase;
-import org.kie.api.KieServices;
 import org.kie.api.definition.type.FactType;
-import org.kie.api.runtime.KieContainer;
+import org.kie.api.event.rule.ObjectDeletedEvent;
+import org.kie.api.event.rule.ObjectInsertedEvent;
+import org.kie.api.event.rule.ObjectUpdatedEvent;
+import org.kie.api.event.rule.RuleRuntimeEventListener;
 import org.kie.api.runtime.KieSession;
 import org.kie.api.runtime.rule.QueryResults;
 import org.kie.api.runtime.rule.QueryResultsRow;
@@ -37,8 +39,6 @@ public class DroolsApplicationTests {
 
   @Autowired private GloableService service;
 
-  @Autowired
-  private RuleService ruleService;
 
   @Test
   public void people() {
@@ -395,14 +395,6 @@ public class DroolsApplicationTests {
   @Test
   public void ruleServiceTest(){
 
-    Calculation calculation = new Calculation();
-    double wage = 5000;
-    calculation.setWage(wage);
-    Calculation calculation1 = (Calculation) ruleService.calculate(calculation);
-
-    System.out.println("---------------------------------------------");
-    System.out.println(calculation.toString());
-    System.out.println("---------------------------------------------");
   }
 
   @Test
@@ -416,6 +408,33 @@ public void itemTest(){
 }
 
 
+@Test
+public void addEventListenerTest(){
+
+  Item item = new Item(1,1,2.0);
+  Item item2 = new Item(2,1,3.0);
+  session.insert(item);
+  session.insert(item2);
+  session.fireAllRules();
+    session.addEventListener(
+        new RuleRuntimeEventListener() {
+          public void objectInserted(ObjectInsertedEvent event) {
+            System.out.println("Object inserted \n"
+                    + event.getObject().toString());
+          }
+
+          public void objectUpdated(ObjectUpdatedEvent event) {
+            System.out.println("Object was updated \n"
+                    + "new Content \n" + event.getObject().toString());
+          }
+
+          public void objectDeleted(ObjectDeletedEvent event) {
+            System.out.println("Object retracted \n"
+                    + event.getOldObject().toString());
+          }
+        }
+);
+}
 
 
   @AfterEach

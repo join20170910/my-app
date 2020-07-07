@@ -1,8 +1,0 @@
-package helloworld
-rule "rule_helloworld"
-    when
-        eval(false)
-    then
-        System.out.println("规则：rule_helloworld触发...");
-end
-

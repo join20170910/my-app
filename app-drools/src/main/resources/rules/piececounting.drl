@@ -1,0 +1,30 @@
+package piececounting
+//计件流程
+import com.mycompany.app.entity.PieceCounting
+
+rule "POS收银"
+salience 10
+when
+ $pc:PieceCounting(taskType == "1" )
+then
+System.out.println($pc.getProvinceLevel());
+System.out.println("111111");
+ end
+
+rule "自助收银"
+salience 9
+no-loop true
+when
+ $pc: PieceCounting();
+then
+update($pc);
+System.out.println("222222");
+ insert($pc);
+ end
+rule "计件拣货"
+salience 15
+when
+eval(true)
+then
+  System.out.println("33333");
+ end

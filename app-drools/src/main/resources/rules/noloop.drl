@@ -1,15 +1,12 @@
-package book.abcd.testnoloop
-import com.mycompany.app.bean.Student
+//当前规则文件用于测试noloop防止规则执行时死循环问题
+package testnoloop
+import com.mycompany.app.entity.Student
 
-/*
-    此规则文件用于测试no-loop属性
-*/
 rule "rule_noloop"
-no-loop true
+    no-loop true//使用no-loop解决死循环问题
     when
-        $student:Student(age == 25)
+        $s:Student(age == 50)
     then
-        update($student);//注意此处执行update会导致当前规则重新被激活
-        System.out.println("规则rule_noloop触发");
+        update($s);//调用update方法会导致相关规则重新匹配
+        System.out.println("规则：rule_noloop触发了...");
 end
-
