@@ -24,22 +24,26 @@ import javax.servlet.http.HttpServletRequest;
 @Slf4j
 public class HttpAspect {
 
-    @Pointcut("execution(public * com.mycompany.app.*(..))")
+    private long beginTime = 0L;
+    @Pointcut("execution(* com.mycompany.app.controller..*.*(..))")
     public void log(){
 
     }
     @Before("log()")
     public void log(JoinPoint joinPoint){
+        beginTime = System.currentTimeMillis();
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
         //url
         //method
         //ip
-        log.info("url={} method={},ip={},class_method=", request.getRequestURL(),request.getMethod(),request.getRemoteAddr(),
+        log.info("url={} method={},ip={},class_method=", request.getRequestURL(),
+                request.getMethod(),request.getRemoteAddr(),
                 joinPoint.getSignature().getDeclaringTypeName()+joinPoint.getSignature().getName()+joinPoint.getArgs());
     }
     @After("log()")
     public void doAfter(){
-
+        Long endTime = (System.currentTimeMillis() - beginTime)/1000;
+     log.info("方法执行时间:{} ", endTime);
     }
 }
