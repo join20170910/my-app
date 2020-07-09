@@ -1,4 +1,4 @@
-package com.mycompany.app.common.aspect;
+package com.mycompany.app.aspect;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 @Slf4j
 public class HttpAspect {
 
-    @Pointcut("execution(public * com.apple.concurrent.*(..))")
+    @Pointcut("execution(public * com.mycompany.app.*(..))")
     public void log(){
 
     }
