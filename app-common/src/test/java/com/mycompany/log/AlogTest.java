@@ -1,5 +1,6 @@
 package com.mycompany.log;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,5 +14,10 @@ public class AlogTest {
 
   private Logger dataLogger = LoggerFactory.getLogger("dataLogger");
 
-  public void logTest() {}
+  @Test
+  public void logTest() {
+    dataLogger.info("dataLogger--------");
+  }
+
+
 }
