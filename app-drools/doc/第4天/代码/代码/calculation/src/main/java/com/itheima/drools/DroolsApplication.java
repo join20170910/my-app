@@ -1,15 +1,11 @@
-package com.mycompany;
-
+package com.itheima.drools;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * @author john
- */
 @SpringBootApplication
-public class StartWebApplication {
+public class DroolsApplication {
     public static void main(String[] args) {
-        SpringApplication.run(StartWebApplication.class, args);
+        SpringApplication.run(DroolsApplication.class);
     }
 }
