@@ -1,10 +1,14 @@
 package com.mycompany.app.entity;
 
+import lombok.ToString;
+
 import java.util.List;
 
 /**
  * 用于测试比较操作符
+ * @author john
  */
+@ToString
 public class ComparisonOperatorEntity {
     private String names;
     private List<String> list;

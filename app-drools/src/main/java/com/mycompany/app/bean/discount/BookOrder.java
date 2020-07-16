@@ -10,11 +10,11 @@ import lombok.ToString;
 @ToString
 public class BookOrder {
 
-    //¶©µ¥Ô­Ê¼¼Û¸ñ£¬¼´ÓÅ»İÇ°¼Û¸ñ
+    //è®¢å•åŸå§‹ä»·æ ¼ï¼Œå³ä¼˜æƒ å‰ä»·æ ¼
 
     private Double originalPrice;
 
-    //¶©µ¥ÕæÊµ¼Û¸ñ£¬¼´ÓÅ»İºó¼Û¸ñ
+    //è®¢å•çœŸå®ä»·æ ¼ï¼Œå³ä¼˜æƒ åä»·æ ¼
 
     private Double realPrice;
 }
