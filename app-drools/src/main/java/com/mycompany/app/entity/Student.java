@@ -1,8 +1,13 @@
 package com.mycompany.app.entity;
 
+import lombok.ToString;
+import org.junit.jupiter.api.Test;
+
 /**
  * 学生实体
+ * @author john
  */
+@ToString
 public class Student {
     private int id;
     private String name;

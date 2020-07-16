@@ -32,12 +32,12 @@ public class ReloadDroolsRules {
         }
 
         KieUtils.setKieContainer(kieServices.newKieContainer(kieServices.getRepository().getDefaultReleaseId()));
-        System.out.println("reloadĞÂ¹æÔòÖØÔØ³É¹¦");
+        System.out.println("reloadæ–°è§„åˆ™é‡è½½æˆåŠŸ");
     }
 
     private String loadRules() {
-        // ´ÓÊı¾İ¿â¼ÓÔØµÄ¹æÔò
-        return "package plausibcheck.adress\n\n rule \"Postcode 6 numbers\"\n\n    when\n  then\n        System.out.println(\"¹æÔò2ÖĞ´òÓ¡ÈÕÖ¾£ºĞ£ÑéÍ¨¹ı!\");\n end";
+        // ä»æ•°æ®åº“åŠ è½½çš„è§„åˆ™
+        return "package plausibcheck.adress\n\n rule \"Postcode 6 numbers\"\n\n    when\n  then\n        System.out.println(\"è§„åˆ™2ä¸­æ‰“å°æ—¥å¿—ï¼šæ ¡éªŒé€šè¿‡!\");\n end";
 
     }
 
@@ -61,7 +61,7 @@ public class ReloadDroolsRules {
 
 
         KieUtils.setKieContainer(kieContainer);
-        System.out.println("ĞÂ¹æÔòÖØÔØ³É¹¦");
+        System.out.println("æ–°è§„åˆ™é‡è½½æˆåŠŸ");
     }
 
 }

@@ -5,10 +5,10 @@ import lombok.Data;
 /** @author john */
 @Data
 public class User {
-  // 姓名
+  // 濮撳悕
 
   private String name;
-  // 用户级别
+  // 鐢ㄦ埛绾у埆
 
   private int level;
 

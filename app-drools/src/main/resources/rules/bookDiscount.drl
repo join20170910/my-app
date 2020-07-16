@@ -1,5 +1,6 @@
 package book.discount
 import com.mycompany.app.entity.Order
+import com.mycompany.app.bean.discount.Customer
 
 /*
     这是一个多行注释
@@ -17,9 +18,12 @@ end
 //所购图书总价在100到200元的优惠20元
 rule "book_discount_2"
     when
-        $order:Order(originalPrice >= 100 && originalPrice < 200) //模式匹配，到规则引擎中（工作内存）查找Order对象
+        //模式匹配，到规则引擎中（工作内存）查找Order对象
+        $order:Order(originalPrice >= 100 && originalPrice < 200)
+        and $customer:Customer(age >20 && gender =='male')
     then
         $order.setRealPrice($order.getOriginalPrice() - 20);
+
         System.out.println("成功匹配到规则二");
 end
 
