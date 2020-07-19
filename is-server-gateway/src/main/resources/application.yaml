@@ -41,10 +41,9 @@ server:
 
 security:
   oauth2:
-    resource:
-      jwk:
-        key-set-uri: http://auth.imooc.com:9090/oauth/token_key
     client:
       client-id: gateway
       client-secret: 123456
-
+    resource:
+      jwt:
+        key-uri: http://auth.imooc.com:9090/oauth/token_key
