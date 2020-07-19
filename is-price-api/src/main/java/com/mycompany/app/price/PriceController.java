@@ -2,6 +2,7 @@ package com.mycompany.app.price;
 
 import java.math.BigDecimal;
 
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +20,8 @@ import lombok.extern.slf4j.Slf4j;
 public class PriceController {
 	
 	@GetMapping("/{id}")
-	public PriceInfo getPrice(@PathVariable Long id) {
-		log.info("productId is "+id);
+	public PriceInfo getPrice(@PathVariable Long id, @AuthenticationPrincipal String username) {
+		log.info("productId is{}, username is {} ",id, username);
 		PriceInfo info = new PriceInfo();
 		info.setId(id);
 		info.setPrice(new BigDecimal(100));
