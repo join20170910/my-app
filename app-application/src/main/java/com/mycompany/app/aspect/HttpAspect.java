@@ -19,8 +19,8 @@ import javax.servlet.http.HttpServletRequest;
  * @Date 2020/7/7 23:35
  * @Version 1.0
  **/
-@Aspect
-@Component
+//@Aspect
+//@Component
 @Slf4j
 public class HttpAspect {
 

@@ -1,4 +1,4 @@
-package com.mycompany.conf;
+package com.mycompany.app.conf;
 
 
 import com.offbytwo.jenkins.JenkinsServer;

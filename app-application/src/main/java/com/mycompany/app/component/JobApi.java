@@ -1,18 +1,17 @@
-package com.mycompany.component;
+package com.mycompany.app.component;
 
-import com.mycompany.conf.JenkinsConfig;
-import org.springframework.stereotype.Component;
-import com.offbytwo.jenkins.JenkinsServer;
-import com.offbytwo.jenkins.client.JenkinsHttpClient;
+import com.mycompany.app.conf.JenkinsConfig;
 import com.offbytwo.jenkins.model.Build;
 import com.offbytwo.jenkins.model.Job;
 import com.offbytwo.jenkins.model.JobWithDetails;
 import com.offbytwo.jenkins.model.MavenJobWithDetails;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
 /**
  * @author john
  */

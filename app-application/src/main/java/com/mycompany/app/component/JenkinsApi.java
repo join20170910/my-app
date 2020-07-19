@@ -1,6 +1,6 @@
-package com.mycompany.component;
+package com.mycompany.app.component;
 
-import com.mycompany.conf.JenkinsConfig;
+import com.mycompany.app.conf.JenkinsConfig;
 import com.offbytwo.jenkins.model.*;
 import org.springframework.stereotype.Component;
 
