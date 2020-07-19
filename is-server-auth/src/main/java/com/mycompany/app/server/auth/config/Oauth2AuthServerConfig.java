@@ -17,7 +17,6 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFactory;
-import org.springframework.session.jdbc.config.annotation.web.http.EnableJdbcHttpSession;
 
 import javax.sql.DataSource;
 
@@ -71,7 +70,8 @@ public class Oauth2AuthServerConfig extends AuthorizationServerConfigurerAdapter
      * @exception:
      * @date:          2020/7/19 15:12
      */
-    private JwtAccessTokenConverter jwtTokenEnhancer() {
+    @Bean
+    public JwtAccessTokenConverter jwtTokenEnhancer() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
         // 导入证书
         KeyStoreKeyFactory keyStoreKeyFactory =

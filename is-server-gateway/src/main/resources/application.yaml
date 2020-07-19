@@ -4,6 +4,8 @@ zuul:
       url: http://auth.imooc.com:9090
     order:
       url: http://order.imooc.com:9080
+    price:
+      url: http://price.imooc.com:9060
   sensitive-headers:
 # sensitive headers that are not passed to downstream requests 默认不转发
 # head设置为空  "Cookie", "Set-Cookie", "Authorization"  转发
