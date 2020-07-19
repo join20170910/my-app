@@ -13,16 +13,28 @@ import java.io.Serializable;
 @ToString
 public class Calculation implements Serializable {
 
-    private double wage;//税前工资
+    //税前工资
 
-    private double wagemore;//应纳税所得额
+    private double wage;
 
-    private double cess;//税率
+    //应纳税所得额
 
-    private double preminus;//速算扣除数
+    private double wagemore;
 
-    private double wageminus;//扣税额
+    //税率
 
-    private double actualwage;//税后工资
+    private double cess;
+
+    //速算扣除数
+
+    private double preminus;
+
+    //扣税额
+
+    private double wageminus;
+
+    //税后工资
+
+    private double actualwage;
 
 }

@@ -1,0 +1,16 @@
+package existsstudenttest
+import com.mycompany.app.entity.Student
+rule "使用exists的规则"
+    when
+        exists Student()
+    then
+        System.out.println("规则：使用exists的规则触发");
+        System.out.println("------------------------");
+end
+rule "没有使用exists的规则"
+    when
+        Student()
+    then
+
+        System.out.println("规则：没有使用exists的规则触发");
+end
