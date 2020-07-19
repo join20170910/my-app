@@ -4,17 +4,19 @@ package com.mycompany.app.server.auth.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.TokenStore;
-import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
+import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
+import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFactory;
 import org.springframework.session.jdbc.config.annotation.web.http.EnableJdbcHttpSession;
 
 import javax.sql.DataSource;
@@ -28,10 +30,22 @@ import javax.sql.DataSource;
  * @Version:        1.0
  */
 
-@EnableJdbcHttpSession
+//@EnableJdbcHttpSession
 @Configuration
 @EnableAuthorizationServer
 public class Oauth2AuthServerConfig extends AuthorizationServerConfigurerAdapter {
+
+
+    @Autowired
+    private DataSource dataSource;
+
+    @Autowired
+    private UserDetailsService userDetailsService;
+    /**
+     * 用户信息校验 验证
+     */
+    @Autowired
+    private AuthenticationManager authenticationManager;
 
     /**
      * 密码加密类
@@ -43,17 +57,31 @@ public class Oauth2AuthServerConfig extends AuthorizationServerConfigurerAdapter
 
     @Bean
     public TokenStore tokenStore(){
-        return new JdbcTokenStore(dataSource);
+        //return new JdbcTokenStore(dataSource);
+        //改为jwt 模式
+        return new JwtTokenStore(jwtTokenEnhancer());
     }
-    @Autowired
-    private DataSource dataSource;
 
-    private UserDetailsService userDetailsService;
+
+
     /**
-     * 用户信息校验 验证
+     * @description:   //TODO  jwt  生成证书: keytool -genkeypair -alias mytest -keyalg RSA -keypass mypass -keystore keystore.jks -storepass mypass
+     * @author:        john
+     * @return:
+     * @exception:
+     * @date:          2020/7/19 15:12
      */
-    @Autowired
-    private AuthenticationManager authenticationManager;
+    private JwtAccessTokenConverter jwtTokenEnhancer() {
+        JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
+        // 导入证书
+        KeyStoreKeyFactory keyStoreKeyFactory =
+                new KeyStoreKeyFactory(new ClassPathResource("keystore.jks"), "mypass".toCharArray());
+        converter.setKeyPair(keyStoreKeyFactory.getKeyPair("mytest"));
+
+        return converter;
+    }
+
+
 
     /**
      * @description:   //TODO  配置 用户访问
@@ -70,6 +98,7 @@ public class Oauth2AuthServerConfig extends AuthorizationServerConfigurerAdapter
                 // reflesh_token 没有密码，通过userDetailsService 查询用户信息
                 userDetailsService(userDetailsService)
                 .tokenStore(tokenStore())
+                .tokenEnhancer(jwtTokenEnhancer())
                 .authenticationManager(authenticationManager);
     }
 
@@ -121,7 +150,9 @@ public class Oauth2AuthServerConfig extends AuthorizationServerConfigurerAdapter
      */
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+
         // 资源服务访问规则
-        security.checkTokenAccess("isAuthenticated()");
+        security.tokenKeyAccess("isAuthenticated()")
+                .checkTokenAccess("isAuthenticated()");
     }
 }
