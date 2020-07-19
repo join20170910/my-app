@@ -9,12 +9,6 @@
     <module>app-common</module>
     <module>app-application</module>
     <module>eureka_server</module>
-    <module>order_service</module>
-    <module>product_service</module>
-    <module>api-gateway</module>
-    <module>config-server</module>
-    <module>docker-demo</module>
-    <module>spring-state-machine</module>
     <module>is-order-api</module>
     <module>is-price-api</module>
     <module>is-server-auth</module>
@@ -102,18 +96,7 @@
       <artifactId>guava</artifactId>
       <version>23.0</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>5.2.2.RELEASE</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-core</artifactId>
-      <version>5.2.2.RELEASE</version>
-    </dependency>
+
 
 
     <dependency>
@@ -126,12 +109,7 @@
       <artifactId>jenkins.client.java</artifactId>
       <version>1.0.0-20171217</version>
     </dependency>-->
-    <!--jenkins-java-client-->
-    <dependency>
-      <groupId>com.offbytwo.jenkins</groupId>
-      <artifactId>jenkins-client</artifactId>
-      <version>0.3.8</version>
-    </dependency>
+
     <dependency>
       <groupId>net.sourceforge.tess4j</groupId>
       <artifactId>tess4j</artifactId>
@@ -148,19 +126,7 @@
       <artifactId>jna</artifactId>
       <version>5.5.0</version>
     </dependency>
-    <!-- JMH基准测试-->
 
-    <dependency>
-      <groupId>org.openjdk.jmh</groupId>
-      <artifactId>jmh-core</artifactId>
-      <version>${jmh.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openjdk.jmh</groupId>
-      <artifactId>jmh-generator-annprocess</artifactId>
-      <version>${jmh.version}</version>
-      <scope>provided</scope>
-    </dependency>
     <dependency>
       <groupId>com.puppycrawl.tools</groupId>
       <artifactId>checkstyle</artifactId>
