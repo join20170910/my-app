@@ -1,5 +1,9 @@
 package com.mycompany.app.order;
 
+import com.alibaba.csp.sentinel.Entry;
+import com.alibaba.csp.sentinel.SphU;
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.alibaba.csp.sentinel.slots.block.BlockException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -26,15 +30,35 @@ public class OrderController {
    * @date:          2020/6/24 22:45
    */
   @PostMapping
+  @SentinelResource(value = "createOrder", blockHandler ="doOnBlock" )
   public OrderInfo create(@RequestBody OrderInfo info, @AuthenticationPrincipal String username) {
 
     PriceInfo priceInfo = restTemplate.getForObject("http://localhost:9060/prices/" +info.getProductId(), PriceInfo.class);
     log.info("price is {},测试：{}",priceInfo.getPrice(),"haha");
     log.info("当前调用者的姓名: {} ID：{}" ,username);
+
+    /*try (Entry entry = SphU.entry("createOrder")) {
+      // Your business logic here.
+      PriceInfo priceInfo = restTemplate.getForObject("http://localhost:9060/prices/" +info.getProductId(), PriceInfo.class);
+      log.info("price is {},测试：{}",priceInfo.getPrice(),"haha");
+      log.info("当前调用者的姓名: {} ID：{}" ,username);
+    } catch (BlockException e) {
+      // Handle rejected request.
+      log.info("限流 异常 {}",e.fillInStackTrace());
+    }*/
+
+    return info;
+  }
+
+  public OrderInfo doOnBlock(@RequestBody OrderInfo info, @AuthenticationPrincipal String username,BlockException e){
+
+    log.info("当前调用者的姓名: {} ID：{}" ,username);
+    log.info("blocked by " + e.getClass().getSimpleName());
     return info;
   }
   @GetMapping("/{id}")
-  public OrderInfo getInfo(@PathVariable Long id,@RequestHeader String username){
+  @SentinelResource("getOrder")
+  public OrderInfo getInfo(@PathVariable Long id,@AuthenticationPrincipal String username){
 
     log.info("orderId is {}",id);
     log.info("当前调用者的姓名: {}" ,username);
