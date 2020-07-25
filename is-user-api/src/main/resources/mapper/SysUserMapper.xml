@@ -19,7 +19,7 @@
         <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
         <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     </resultMap>
-    <resultMap id="userVoMap" type="com.microservice.skeleton.common.vo.UserVo">
+    <resultMap id="userVoMap" type="com.mycompany.common.vo.UserVo">
         <id column="id" jdbcType="INTEGER" property="id" />
         <result column="avatar" jdbcType="VARCHAR" property="avatar" />
         <result column="username" jdbcType="VARCHAR" property="username" />
