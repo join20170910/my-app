@@ -1,9 +1,7 @@
 package com.mycompany.designpatterns;
 
-import com.mycompany.app.common.designpatterns.chain.*;
+import com.mycompany.common.designpatterns.chain.*;
 import org.junit.Test;
-
-import java.beans.Transient;
 
 /**
  * @ClassName DesignPattern
