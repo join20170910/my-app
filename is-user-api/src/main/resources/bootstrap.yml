@@ -1,6 +1,6 @@
 spring:
   application:
-    name: mss-user
+    name: is-user
   cloud:
     nacos:
       discovery:
