@@ -15,6 +15,9 @@
       <module>is-server-gateway</module>
       <module>is-admin</module>
       <module>app-drools</module>
+    <module>api-ops</module>
+      <module>is-user-api</module>
+      <module>is-monitor</module>
   </modules>
   <name>my-app</name>
   <url>http://maven.apache.org</url>
