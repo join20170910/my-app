@@ -2,7 +2,9 @@ server:
   port: 9090
 spring:
   application:
+  main:
     name: server-auth
+    allow-bean-definition-overriding: true
   cloud:
     nacos:
       discovery:
