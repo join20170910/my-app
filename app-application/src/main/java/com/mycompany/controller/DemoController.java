@@ -1,6 +1,6 @@
-package com.mycompany.app.controller;
+package com.mycompany.controller;
 
-import com.mycompany.app.utils.BitMatrixUtils;
+import com.mycompany.utils.BitMatrixUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,6 +1,6 @@
-package com.mycompany.app;
+package com.mycompany;
 
-import com.mycompany.utils.DateUtils;
+import com.mycompany.common.utils.DateUtils;
 import org.junit.Test;
 
 public class AgogTest {

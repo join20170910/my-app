@@ -1,4 +1,4 @@
-package com.mycompany.app.controller;
+package com.mycompany.controller;
 
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
