@@ -4,4 +4,4 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: http://112.74.31.211:884
+        server-addr: http://112.74.31.211:8848
