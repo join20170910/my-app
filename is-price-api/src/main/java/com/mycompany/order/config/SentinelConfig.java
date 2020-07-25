@@ -1,4 +1,4 @@
-package com.mycompany.config;
+package com.mycompany.order.config;
 
 import com.alibaba.csp.sentinel.datasource.ReadableDataSource;
 import com.alibaba.csp.sentinel.datasource.zookeeper.ZookeeperDataSource;
