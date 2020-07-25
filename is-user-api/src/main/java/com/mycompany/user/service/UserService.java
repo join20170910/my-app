@@ -1,6 +1,6 @@
 package com.mycompany.user.service;
 
-import com.mycompany.entity.SysUser;
+import com.mycompany.user.entity.SysUser;
 
 /**
  * @author john
