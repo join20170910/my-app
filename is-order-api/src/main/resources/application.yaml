@@ -1,8 +1,4 @@
-server:
-  port: 9080
 spring:
-  application:
-    name: order-api
   cloud:
     sentinel:
       transport:

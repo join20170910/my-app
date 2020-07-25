@@ -1,0 +1,14 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: server-auth
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://112.74.31.211:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

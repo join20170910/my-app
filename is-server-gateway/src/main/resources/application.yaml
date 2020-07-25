@@ -29,7 +29,7 @@ zuul:
           - httpmethod
 spring:
   application:
-    name:
+    name: gateway
   datasource:
     url: jdbc:mysql://localhost:3306/oauth2?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root

@@ -1,0 +1,9 @@
+server:
+  port: 9060
+spring:
+  application:
+    name: price-api
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://112.74.31.211:8848

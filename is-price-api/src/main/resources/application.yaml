@@ -1,8 +1,4 @@
-server:
-  port: 9060
 spring:
-  application:
-    name: price-api
   cloud:
     sentinel:
       transport:
