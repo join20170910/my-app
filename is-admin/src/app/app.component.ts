@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
   authenticated = false;
   credentials = {username:'xixi',password: '123456'};
   order = {id:'0',productId:'100'}
-  constructor(private http: HttpClient){
+  constructor(private http: HttpClient,private cookieService: CookieService){
     this.http.get('me').subscribe(
       (data: any) => {
         if(data){
@@ -64,6 +65,9 @@ export class AppComponent {
     )
   }
   logout(){
+
+    this.cookieService.delete('imooc-access-token','/','imooc.com');
+    this.cookieService.delete('imooc-refresh-token','/','imooc.com');
     this.http.post('/logout',this.credentials).subscribe(
       () =>{
         //调转到认证服务器的默认的logout界面

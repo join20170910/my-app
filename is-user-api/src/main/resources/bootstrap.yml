@@ -5,7 +5,3 @@ spring:
     nacos:
       discovery:
         server-addr: 112.74.31.211:8848
-      config:
-        server-addr: 112.74.31.211:8848
-        file-extension: yml
-        namespace: c6de805f-0548-441a-8e6f-f2d87afc3d37

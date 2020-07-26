@@ -1,4 +1,0 @@
-JMH S 45 com.mycompany.jmh.JMHSample_01_HelloWorldTest S 77 com.mycompany.jmh.generated.JMHSample_01_HelloWorldTest_testObjectKey_jmhTest S 13 testObjectKey S 10 Throughput I 1 1 A 1 1 1 E I 1 3 E E I 1 3 T 3 5 s E I 1 1 E E E E E E U 7 SECONDS E E 
-JMH S 24 com.mycompany.jmh.TestPS S 54 com.mycompany.jmh.generated.TestPS_testForEach_jmhTest S 11 testForEach S 10 Throughput E A 1 1 1 E I 1 1 T 3 3 s E I 1 1 T 3 3 s E I 1 5 E E E E E E E E E 
-JMH S 24 com.mycompany.jmh.PsTest S 54 com.mycompany.jmh.generated.PsTest_testForEach_jmhTest S 11 testForEach S 10 Throughput E A 1 1 1 E E E E E E E E E E E E E E E E E 
-JMH S 45 com.mycompany.jmh.JMHSample_01_HelloWorldTest S 77 com.mycompany.jmh.generated.JMHSample_01_HelloWorldTest_testStringKey_jmhTest S 13 testStringKey S 10 Throughput I 1 1 A 1 1 1 E I 1 3 E E I 1 3 T 3 5 s E I 1 1 E E E E E E U 7 SECONDS E E 

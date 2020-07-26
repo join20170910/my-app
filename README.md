@@ -23,3 +23,4 @@ the "Deliver" stage of your Pipeline.
 
 Drools规则引擎 系列教程
 https://www.ytooo.top/d39d880f.html#import_function
+  6.7
